@@ -1,0 +1,71 @@
+{% extends "header.html" %}
+
+<head>
+
+    <title> League of Legends </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <style type="text/css">
+        #mainNav {
+            background-color: black;
+        }
+        
+        header .htop {
+            position: relative;
+            margin-top: 50px;
+            width: 100%;
+            text-align: center;
+            min-height: auto;
+            background-image: url(http://lorempixel.com/output/sports-q-c-900-700-10.jpg);
+            color: white;
+            background-size: cover;
+            font-size: 1em;
+            padding: 3em;
+        }
+    </style>
+
+</head>
+
+{% block body %}
+
+<br>
+<br>
+<br>
+<br>
+<h5> Welcome to League of Legends </h5>
+
+<section id='LoL'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-12 text-center'>
+                <h3>Stream</h3>
+
+                <script src="http://player.twitch.tv/js/embed/v1.js"></script>
+                <div id="League"></div>
+                <script type="text/javascript">
+                    var options = {
+                        width: 700,
+                        height: 405,
+                        channel: "imaqtpie",
+                    };
+                    var player = new Twitch.Player("League", options);
+                    player.setVolume(0.5);
+                </script>
+
+                <p>Work Work</p>
+            </div>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-md-6 text-center'>
+            <h3>Stats</h3>
+            <p>Work Work</p>
+        </div>
+        <div class='col-md-6 text-center'>
+            <h3>Line</h3>
+            <p>Work Work</p>
+        </div>
+    </div>
+
+    {% endblock %}
