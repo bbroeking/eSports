@@ -56,16 +56,85 @@
             </div>
         </div>
     </div>
+</section>
 
-    <div class='row'>
-        <div class='col-md-6 text-center'>
-            <h3>Stats</h3>
-            <p>Work Work</p>
-        </div>
-        <div class='col-md-6 text-center'>
-            <h3>Line</h3>
-            <p>Work Work</p>
-        </div>
+<div class='row'>
+    <div class='col-md-6 text-center'>
+        <h3>Stats</h3>
+        <p>Work Work</p>
     </div>
+    <div class='col-md-6 text-center'>
+        <h3>Line</h3>
+        <div class='col-md-3'>
+            <button class="btn btn-primary" data-toggle="modal" data-target=".left-team-modal"> Selfless -150 </button>
 
-    {% endblock %}
+            <div class="modal fade left-team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div id="login-overlay" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class='well'>
+                                        <div class='col'>
+                                            <form id="betSlip" method="POST" action="/overwatch/" novalidate="novalidate">
+                                                <div class="form-group">
+                                                    <label for="risk" class="control-label">Risk</label>
+                                                    <input type="text" class="form-control" id="username" name="username" value="" required="" title="Amount to Risk" placeholder="Place bet amount here">
+                                                    <span class="help-block"></span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="towin" class="control-label">To Win</label>
+                                                    <input type="towin" class="form-control" id="towin" name="towin" value="" required="" title="Amount to win">
+                                                    <span class="help-block"></span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-3'>
+            <button class="btn btn-primary" data-toggle="modal" data-target=".right-team-modal"> Rogue +130 </button>
+
+            <div class="modal fade right-team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div id="login-overlay" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class='well'>
+                                        <div class='col'>
+                                            <form id="betSlip" method="POST" action="/overwatch/" novalidate="novalidate">
+                                                <div class="form-group">
+                                                    <label for="risk" class="control-label">Risk</label>
+                                                    <input type="text" class="form-control" id="username" name="username" value="" required="" title="Amount to Risk" placeholder="Place bet amount here">
+                                                    <span class="help-block"></span>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="towin" class="control-label">To Win</label>
+                                                    <input type="towin" class="form-control" id="towin" name="towin" value="" required="" title="Amount to win">
+                                                    <span class="help-block"></span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>Work Work</p>
+            </div>
+        </div>
+
+        {% endblock %}
